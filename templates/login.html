@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>REGISTRASHIA</title>
+    <style>
+        body {
+            background: linear-gradient(90deg, #ff00ff, #00ffff);
+            font-family: "Comic Sans MS", Papyrus, Curlz MT;
+        }
+        
+        .container {
+            width: 300px;
+            margin: 15% 0 0 60%;
+            transform: rotate(-7deg);
+            border: 8px dotted red;
+            padding: 20px;
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36zwjjgzhhYWGMYAEYB8RmROaABADeOQ8CXl/xfgAAAABJRU5ErkJggg==');
+        }
+
+        .title {
+            font-size: 32px;
+            color: yellow;
+            text-shadow: 3px 3px black;
+            text-decoration: blink;
+            margin-bottom: 50px;
+        }
+
+        input {
+            background: #f0f0f0;
+            border: 4px ridge purple;
+            margin: 15px 0;
+            padding: 5px;
+            font-size: 24px;
+            transform: skewX(-15deg);
+        }
+
+        button {
+            background: #00ff00;
+            border: 6px double #ff0000;
+            padding: 15px 30px;
+            font-family: Wingdings;
+            font-size: 24px;
+            cursor: crosshair;
+            transition: all 0.1s;
+        }
+
+        button:hover {
+            background: #ff00ff;
+            transform: scale(3) rotate(360deg);
+            border-radius: 50%;
+        }
+
+        .cat-img {
+            position: fixed;
+            top: 50px;
+            left: 10px;
+            width: 200px;
+            opacity: 0.5;
+        }
+
+        .marquee {
+            color: lime;
+            font-size: 48px;
+            position: absolute;
+            top: 0;
+            left: -100px;
+        }
+    </style>
+</head>
+<body>
+    <marquee class="marquee" direction="right" scrollamount="20">WELCOME ПИЗДЮКИ!!!</marquee>
+
+    <img src="https://i.imgur.com/3eZ9H5a.png" class="cat-img" alt="ugly cat">
+
+    <form class="container" method="POST">
+        <div class="title">РЕГИСТРАЦІЯ V2.3</div>
+        {% if message %}
+            <h1>{{ message }}</h1>
+        {% endif %}
+        <input type="text" name="username"
+               placeholder="ВАШ НИКНЕЙМ СЮДА" 
+               style="margin-left: -50px;">
+        
+        <br>
+        
+        <input type="password" name="password"
+               placeholder="ПАРОЛЬ БЛЯТЬ" 
+               style="transform: rotate(3deg); margin-top: 30px;">
+        
+        <br><br>
+        
+        <button type="submit">
+            ПОДТВЕРДИТЬ (НАЖМИ МЕНЯ СЮДА)
+        </button>
+    </form>
+
+    <div style="position: fixed; bottom: 0; right: 0; color: white; font-size: 10px;">
+        © 1812 Best Website. All rights reserved. Design by PRO Designer
+    </div>
+</body>
+</html>
