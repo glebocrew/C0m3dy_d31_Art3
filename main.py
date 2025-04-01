@@ -13,6 +13,7 @@ def index():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     users = pd.read_html('https://docs.google.com/spreadsheets/d/1qJ3veQPbXTwN21M7Ovl9ITWzkk5zaSJAVoB1_5FxfLw/edit?usp=sharing')
+    users = pd.read_html('https://docs.google.com/spreadsheets/d/1qJ3veQPbXTwN21M7Ovl9ITWzkk5zaSJAVoB1_5FxfLw/edit?usp=sharing')
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
